@@ -15,4 +15,8 @@ func main() {
 	}
 
 	fmt.Println(bookworms)
+
+	for i, vals := range bookworms {
+		fmt.Printf("key: %v, value: %v\n", i, vals)
+	}
 }
