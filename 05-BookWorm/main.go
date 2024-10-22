@@ -7,11 +7,12 @@ import (
 )
 
 func main() {
-	file, err := os.OpenFile("testdata/bookworm.json")
+	bookworms, err := loadBookworms("testdata/bookworm.json")
 
 	if err != nil {
 		log.Fatal(err)
+		os.Exit(1)
 	}
 
-	fmt.Println(file)
+	fmt.Println(bookworms)
 }
